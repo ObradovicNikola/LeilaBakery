@@ -1,0 +1,168 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(65, 148, 187);
+}
+
+/* GLOBAL */
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.btn1 {
+    height: 40px;
+    background: rgb(254, 126, 0);
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* HEADER */
+
+header {
+    background-color: rgb(28, 55, 87);
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: rgb(254, 126, 0) 4px solid;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: rgb(254, 126, 0);
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0px 20px 0px 20px;
+}
+
+header #branding,
+header nav {
+    float: left;
+}
+
+header #branding a {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+}
+
+/* SHOWCASE */
+
+#showcase {
+    min-height: 400px;
+    background: url("/Images/header.jpg") no-repeat;
+    background-size: 100%;
+    text-align: center;
+    color: rgb(28, 55, 87);
+}
+
+#showcase h1 {
+    margin-top: 15px;
+}
+
+#newsletter {
+    padding: 15px;
+    color: white;
+    background: rgb(28, 55, 87);
+    border-top: rgb(254, 126, 0) 2px solid;
+    border-bottom: rgb(254, 126, 0) 1px solid;
+}
+
+#newsletter p {
+    margin: 5px 0px 5px 20px;
+    float: left;
+}
+
+#newsletter form {
+    margin: 5px 0px 5px 20px;
+    float: right;
+}
+
+#newsletter input {
+    padding: 5px;
+    margin: 10px;
+    height: 25px;
+    width: 250px;
+}
+
+/* BOXES */
+
+#boxes {
+    margin-top: 20px;
+    color: rgb(28, 55, 87);
+}
+
+#boxes .box {
+    float: left;
+    width: 30%;
+    min-width: 200px;
+    height: 400px;
+    margin: 10px;
+}
+
+#boxes .box img {
+    width: 100%;
+    height: 60%;
+    max-width: 300px;
+    margin: 0;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(254, 126, 0);
+    color: rgb(28, 55, 87);
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 768px) {
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter p,
+    #newsletter form,
+    #boxes .box {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    #newsletter button {
+        display: block;
+        width: 100%;
+    }
+    #newsletter input {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+}
