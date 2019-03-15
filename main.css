@@ -170,3 +170,22 @@ footer {
         min-height: 150px;
     }
 }
+
+
+@media(max-width: 1000px) {
+    #newsletter p,
+    #newsletter form {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #newsletter button {
+        display: block;
+        width: 100%;
+    }
+    #newsletter input {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+}
