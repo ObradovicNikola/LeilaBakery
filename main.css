@@ -4,7 +4,7 @@ body {
     line-height: 1.5;
     padding: 0;
     margin: 0;
-    background-color: rgb(65, 148, 187);
+    background-color: white;
 }
 
 /* GLOBAL */
@@ -27,12 +27,23 @@ ul {
     padding-left: 20px;
     padding-right: 20px;
 }
+.light {
+    color: rgb(28, 55, 87);
+    padding: 15px;
+    border: 1px solid rgb(254, 126, 0);
+}
 
 .dark {
     background: rgb(28, 55, 87);
     padding: 15px;
     border: 1px solid rgb(254, 126, 0);
 }
+
+.current {
+    pointer-events: none;
+    cursor: default;
+    color: rgb(144, 99, 61);
+ }
 
 /* HEADER */
 
@@ -57,14 +68,18 @@ header nav a:hover {
 }
 
 header li {
-    float: left;
     display: inline;
     padding: 0px 20px 0px 20px;
 }
 
-header #branding,
-header nav {
+header #branding {
     float: left;
+    background-image: url("Images/logo.png");
+    background-size: 180px;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+    text-indent: -9999999px;
 }
 
 header #branding a {
@@ -73,6 +88,8 @@ header #branding a {
 
 header nav {
     float: right;
+    position: relative;
+    top: 30px;
 }
 
 /* SHOWCASE */
@@ -122,19 +139,32 @@ header nav {
     color: rgb(28, 55, 87);
 }
 
+#boxes .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #boxes .box {
-    float: left;
     width: 30%;
     min-width: 200px;
-    height: 400px;
-    margin: 10px;
+    height: 420px;
+    margin: auto;
+    padding-top: 5px;
+}
+
+figcaption,
+figure p {
+    text-align: center;
+    padding: 0px 10px 10px 10px;
 }
 
 #boxes .box img {
     width: 100%;
     height: 60%;
     max-width: 300px;
-    margin: 0;
+    margin: none;
+    border-radius: 50%;
+    box-shadow: rgb(28, 55, 87) 0px 0px 5px;
 }
 
 #main {
@@ -145,7 +175,7 @@ header nav {
 aside#sidebar {
     float: right;
     width: 35%;
-    margin-top: 10px;
+    margin-top: 62px;
 }
 
 aside#sidebar .message input,
@@ -172,6 +202,34 @@ footer {
 }
 
 /* MEDIA QUERIES */
+
+@media(min-width: 1200px) {
+    #boxes .box img {
+        position: relative;
+        left: calc((100% - 300px)/2);
+    }
+}
+
+@media(max-width: 1115px) {
+
+    #newsletter p,
+    #newsletter form {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    #newsletter button {
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter input {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 15px;
+    }
+}
 
 @media(max-width: 768px) {
 
@@ -204,26 +262,10 @@ footer {
     #showcase {
         min-height: 150px;
     }
-}
 
-
-@media(max-width: 1000px) {
-
-    #newsletter p,
-    #newsletter form {
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
-
-    #newsletter button {
+    /*
+    #boxes .container {
         display: block;
-        width: 100%;
     }
-
-    #newsletter input {
-        width: 100%;
-        margin-left: 0px;
-        margin-bottom: 15px;
-    }
+    */
 }
