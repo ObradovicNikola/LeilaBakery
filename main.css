@@ -137,6 +137,10 @@ header nav {
     margin: 0;
 }
 
+#main {
+    color: white;
+}
+
 /* Sidebar */
 aside#sidebar {
     float: right;
