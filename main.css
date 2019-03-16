@@ -28,6 +28,12 @@ ul {
     padding-right: 20px;
 }
 
+.dark {
+    background: rgb(28, 55, 87);
+    padding: 15px;
+    border: 1px solid rgb(254, 126, 0);
+}
+
 /* HEADER */
 
 header {
@@ -131,6 +137,26 @@ header nav {
     margin: 0;
 }
 
+/* Sidebar */
+aside#sidebar {
+    float: right;
+    width: 35%;
+    margin-top: 10px;
+}
+
+aside#sidebar .message input,
+aside#sidebar .message textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+/* main-col */
+article#main-col {
+    float: left;
+    width: 60%;
+}
+
 /* FOOTER */
 
 footer {
@@ -144,6 +170,7 @@ footer {
 /* MEDIA QUERIES */
 
 @media(max-width: 768px) {
+
     header #branding,
     header nav,
     header nav li,
@@ -154,18 +181,22 @@ footer {
         text-align: center;
         width: 100%;
     }
+
     header {
         padding-bottom: 20px;
     }
+
     #newsletter button {
         display: block;
         width: 100%;
     }
+
     #newsletter input {
         width: 100%;
         margin-left: 0px;
         margin-bottom: 15px;
     }
+
     #showcase {
         min-height: 150px;
     }
@@ -173,16 +204,19 @@ footer {
 
 
 @media(max-width: 1000px) {
+
     #newsletter p,
     #newsletter form {
         float: none;
         text-align: center;
         width: 100%;
     }
+
     #newsletter button {
         display: block;
         width: 100%;
     }
+
     #newsletter input {
         width: 100%;
         margin-left: 0px;
