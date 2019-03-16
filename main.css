@@ -27,6 +27,11 @@ ul {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.darkblue {
+    color: rgb(28, 55, 87);
+}
+
 .light {
     color: rgb(28, 55, 87);
     padding: 15px;
