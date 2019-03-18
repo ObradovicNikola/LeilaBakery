@@ -48,20 +48,21 @@ ul {
     pointer-events: none;
     cursor: default;
     color: rgb(144, 99, 61);
- }
+}
 
 /* HEADER */
 
 header {
     background-color: rgb(28, 55, 87);
     color: white;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 25px;
     border-bottom: rgb(254, 126, 0) 4px solid;
+    height: 70px;
 }
 
 header a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
@@ -85,6 +86,8 @@ header #branding {
     width: 200px;
     height: 100px;
     text-indent: -9999999px;
+    position: relative;
+    background-position-x: 30px;
 }
 
 header #branding a {
@@ -208,6 +211,11 @@ footer {
 
 /* MEDIA QUERIES */
 
+header .tablet,
+header .mobile {
+    display: none;
+}
+
 @media(min-width: 1200px) {
     #boxes .box img {
         position: relative;
@@ -236,7 +244,7 @@ footer {
     }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 770px) {
 
     header #branding,
     header nav,
@@ -247,10 +255,6 @@ footer {
         float: none;
         text-align: center;
         width: 100%;
-    }
-
-    header {
-        padding-bottom: 20px;
     }
 
     #newsletter button {
@@ -268,9 +272,57 @@ footer {
         min-height: 150px;
     }
 
-    /*
-    #boxes .container {
-        display: block;
+    header {
+        padding-top: 5px;
+        padding-bottom: 25px;
+        border-bottom: rgb(254, 126, 0) 4px solid;
+        height: 100px;
     }
-    */
+    
+    header #branding {
+        float: left;
+        width: 200px;
+        background-position-y: 10px;
+    }
+    
+    header nav {
+        display: inline;
+        top: 30px;
+        left: 30px;
+    }
+    header .tablet {
+        display: inline;
+    }
+
+    header .desktop,
+    header .mobile {
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+
+    header {
+        height: 270px;
+        overflow: visible;
+    }
+    
+    header li {
+        display: block;
+        padding: 5px 0px 5px 0px;
+    }
+    
+    header nav {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    header .mobile {
+        display: inline-block;
+    }
+
+    header .desktop,
+    header .tablet {
+        display: none;
+    }
 }
